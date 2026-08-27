@@ -11,7 +11,8 @@
   },
   "include": [
     "index.mts",
-    "index.spec.mts"
+    "index.spec.mts",
+    "vitest.config.mts"
   ],
   "exclude": [
     ".local",

@@ -27,6 +27,12 @@ npm run fix
 { set +x; } 2>/dev/null
 echo
 
+echo "${MESSAGE_COLOR}[pre-commit] Running tests...${NO_COLOR}"
+set -x
+npm run test
+{ set +x; } 2>/dev/null
+echo
+
 echo "${MESSAGE_COLOR}[pre-commit] Removing dev dependencies from the local ${VALUE_COLOR}node_modules/${MESSAGE_COLOR} folder...${NO_COLOR}"
 set -x
 npm install --omit=dev

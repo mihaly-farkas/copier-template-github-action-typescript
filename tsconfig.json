@@ -2,12 +2,16 @@
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "build"
+    "outDir": "build",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "include": [
     "index.mts"
   ],
   "exclude": [
+    ".local",
     "node_modules",
     "build"
   ]

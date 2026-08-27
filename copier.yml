@@ -25,4 +25,8 @@ githubActionDescription:
     type: str
     help: The description of the GitHub Action
 
+githubActionExampleStepName:
+  type: str
+  help: The name of the step in the example GitHub Action workflow
+
 

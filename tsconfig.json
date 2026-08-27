@@ -6,10 +6,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["node", "vitest/globals"]
   },
   "include": [
-    "index.mts"
+    "index.mts",
+    "index.spec.mts"
   ],
   "exclude": [
     ".local",

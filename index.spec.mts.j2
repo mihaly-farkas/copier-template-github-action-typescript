@@ -7,7 +7,6 @@ vi.mock('@actions/core', () => ({
 
 test('{{ githubActionName }} GitHub Action fails', async () => {
   // ACT
-  // @ts-ignore
   await import('./index.mts');
 
   // ASSERT

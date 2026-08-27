@@ -1,3 +1,7 @@
 import * as core from '@actions/core';
 
-core.setFailed('{{ githubActionName }} GitHub Action is not implemented!');
+try {
+  core.setFailed('{{ githubActionName }} GitHub Action is not implemented!');
+} catch (error) {
+  core.setFailed(`Action failed with error: ${error}`);
+}

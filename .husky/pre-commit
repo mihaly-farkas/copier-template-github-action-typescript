@@ -41,3 +41,6 @@ set -x
 git add -f node_modules/
 { set +x; } 2>/dev/null
 echo
+
+echo "${MESSAGE_COLOR}Committing the changes...${RESET_COLORS}"
+echo

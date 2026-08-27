@@ -29,3 +29,5 @@ set -x
 git update-index --skip-worktree node_modules/.package-lock.json
 { set +x; } 2>/dev/null
 echo
+
+echo "${MESSAGE_COLOR}Commit completed successfully${RESET_COLORS}"

@@ -13,6 +13,7 @@ To create a new GitHub Action, run the following commands:
 ```bash
 copier copy gh:mihaly-farkas/copier-template-github-action-typescript --vcs-ref main .
 npm install
+npm run dependency-management:update-minor-dependencies
 git init
 git add .
 git commit -m "chore: scaffold the GitHub Action (TypeScript) skeleton"

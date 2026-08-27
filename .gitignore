@@ -1,0 +1,21 @@
+# IDE: IntelliJ IDEA
+/.idea/
+/*.iws
+/*.iml
+/*.ipr
+
+# General
+/.bak/
+/.cache/
+/.generated/
+/.local/
+/.run/
+/.tmp/
+/.tmp-*/
+/.env
+/*@tmp
+/snyk.json
+/snyk.sarif
+
+# npm
+/node_modules/

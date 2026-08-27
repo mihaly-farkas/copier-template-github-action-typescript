@@ -1,0 +1,28 @@
+_templates_suffix: .j2
+
+licenceOwner:
+  type: str
+  help: The name of the license owner
+
+licenseYearStart:
+  type: int
+  help: The year the license starts (by default the current year)
+  default: 2026
+
+githubRepositoryOwner:
+    type: str
+    help: The owner of the git repository
+
+githubRepositoryName:
+    type: str
+    help: The name of the git repository without the owner
+
+githubActionName:
+    type: str
+    help: The name of the GitHub Action
+
+githubActionDescription:
+    type: str
+    help: The description of the GitHub Action
+
+

@@ -15,9 +15,8 @@ copier copy gh:mihaly-farkas/copier-template-github-action-typescript --vcs-ref 
 ```
 
 ```bash
-npm install
-npm run dependency-management:update-minor-dependencies
-chmod +x .husky/*
+chmod +x tool/dev/set-up-dev-environment.sh
+tool/dev/set-up-dev-environment.sh
 ```
 
 ```bash

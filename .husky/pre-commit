@@ -41,10 +41,3 @@ set -x
 git add -f node_modules/
 { set +x; } 2>/dev/null
 echo
-
-echo "${MESSAGE_COLOR}Setting the ${VALUE_COLOR}node_modules/.package-lock.json${MESSAGE_COLOR} file worktree tracking skip...${RESET_COLORS}"
-set -x
-git update-index --skip-worktree node_modules/.package-lock.json
-{ set +x; } 2>/dev/null
-echo
-

@@ -1,7 +1,11 @@
 import * as core from '@actions/core';
 
-try {
+const run = async () => {
   core.setFailed('{{ githubActionName }} GitHub Action is not implemented!');
+};
+
+try {
+  await run();
 } catch (error) {
   core.setFailed(`Action failed with error: ${error}`);
 }

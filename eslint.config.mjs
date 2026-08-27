@@ -3,6 +3,29 @@ import gts from 'gts';
 let customConfig = [];
 let hasIgnoresFile = false;
 
+const withModuleTsExtensions = config => {
+  if (!config.files) {
+    return config;
+  }
+
+  return {
+    ...config,
+    files: config.files.flatMap(filePattern => {
+      if (filePattern === '**/*.ts') {
+        return ['**/*.ts', '**/*.mts'];
+      }
+
+      if (filePattern === '**/*.tsx') {
+        return ['**/*.tsx', '**/*.mtsx'];
+      }
+
+      return [filePattern];
+    }),
+  };
+};
+
+const gtsWithModuleTsExtensions = gts.map(withModuleTsExtensions);
+
 try {
   // noinspection JSFileReferences
   await import('./eslint.ignores.mjs');
@@ -19,7 +42,7 @@ if (hasIgnoresFile) {
 
 export default [
   ...customConfig,
-  ...gts,
+  ...gtsWithModuleTsExtensions,
   {
     rules: {
       'max-len': [

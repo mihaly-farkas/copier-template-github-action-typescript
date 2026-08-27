@@ -1,6 +1,5 @@
 {
   "name": "@{{ githubRepositoryOwner }}/{{ githubRepositoryName }}",
-  "type": "module",
   "description": "{{ githubActionDescription }}",
   "keywords": [
     "github-actions"
@@ -10,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/{{ githubRepositoryOwner }}/{{ githubRepositoryName }}.git"
   },
+  "type": "commonjs",
   "engines": {
     "node": ">= 24.0.0"
   },
@@ -17,17 +17,16 @@
   "scripts": {
     "clean": "npm run clean:gts",
     "clean:gts": "npx gts clean",
-    "test": "npm run clean && npm run verify && npm run test:run",
-    "test:run": "npx cucumber-js",
-    "verify": "npm run verify:gts",
+    "test": "npm run clean && npm run verify",
+    "verify": "npm run verify:tsc && npm run verify:gts",
+    "verify:tsc": "npx tsc --noEmit",
     "verify:gts": "npx gts check",
-    "fix": "npm run clean && npm run fix:gts",
+    "fix": "npm run clean && npm run verify:tsc && npm run fix:gts",
     "fix:gts": "npx gts fix",
     "dependency-management:show-major-updates": "npx npm-check-updates",
     "dependency-management:show-minor-updates": "npx npm-check-updates --target semver",
     "dependency-management:update-minor-dependencies": "npx npm-check-updates --target minor --upgrade && npm install",
-    "prepare:husky": "husky",
-    "prepare": "npm run prepare:husky"
+    "prepare": "command -v husky >/dev/null && husky || true"
   },
   "dependencies": {
     "@actions/core": "3.0.1",
@@ -37,11 +36,14 @@
   "devDependencies": {
     "@types/node": "24.13.3",
     "chai": "6.2.2",
+    "eslint-plugin-chai-friendly": "^1.2.1",
     "gts": "7.0.0",
     "husky": "9.1.7",
-    "lint-staged": "17.3.0",
+    "lint-staged": "17.4.1",
     "npm-check-updates": "23.1.0",
-    "rimraf": "6.1.3"
+    "rimraf": "6.1.3",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": "gts fix",

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Set strict mode for bash
+set -euo pipefail
+
+# Bright ANSI color escape sequences.
+BRIGHT_MAGENTA=$'\e[1;35m'
+BRIGHT_CYAN=$'\e[1;36m'
+
+# Reset all ANSI attributes.
+RESET_COLORS=$'\e[0m'
+
+# Named colors
+MESSAGE_COLOR="${BRIGHT_CYAN}"
+VALUE_COLOR="${BRIGHT_MAGENTA}"
+
+#######################################################################################################################
+# Pre-commit hook script
+#######################################################################################################################
+
+echo "${MESSAGE_COLOR}Running code fixers...${RESET_COLORS}"
+set -x
+npm run fix
+{ set +x; } 2>/dev/null
+
+echo "${MESSAGE_COLOR}Omitting dev dependencies from the local ${VALUE_COLOR}node_modules/${MESSAGE_COLOR} folder...${RESET_COLORS}"
+set -x
+npm install --omit=dev
+{ set +x; } 2>/dev/null

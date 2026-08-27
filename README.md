@@ -12,17 +12,26 @@ To create a new GitHub Action, run the following commands:
 
 ```bash
 copier copy gh:mihaly-farkas/copier-template-github-action-typescript --vcs-ref main .
-npm install
-npm run dependency-management:update-minor-dependencies
-git init
-git add .
-git commit -m "chore: scaffold the GitHub Action (TypeScript) skeleton"
-git branch -M main
-git remote add origin https://github.com/$(yq .githubRepositoryOwner .copier-answers.yml)/$(yq .githubRepositoryName .copier-answers.yml).git
-git push -u origin main
 ```
 
-## ⚠️ Disclaimer & Liability
+```bash
+npm install
+npm run dependency-management:update-minor-dependencies
+chmod +x .husky/pre-commit .husky/post-commit
+```
+
+```bash
+git init
+git add . -A
+git commit --message="chore: scaffold the GitHub Action (TypeScript) skeleton"
+git branch --move --force main
+git remote add origin https://github.com/$(yq .githubRepositoryOwner .copier-answers.yml)/$(yq .githubRepositoryName .copier-answers.yml).git
+git push --set-upstream origin main
+```
+
+
+
+## ⚠️ Disclaimer & Liabilityq
 
 This is a hobby project. I make no guarantee that it is production-ready. The project may contain experimental or incomplete features.
 

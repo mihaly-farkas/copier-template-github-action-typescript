@@ -16,8 +16,7 @@ npm install
 git init
 git add .
 git commit -m "chore: scaffold GitHub Action with TypeScript"
-git branch -M v0
-
+git branch -M main
 ```
 
 ## ⚠️ Disclaimer & Liability
@@ -28,4 +27,4 @@ Use it at your own risk, and carefully review and adapt the configuration before
 
 ## ⚖️ License
 
-This project is licensed under the [MIT License](https://github.com/mihaly-farkas/spring-cloud-config-server?tab=MIT-1-ov-file).
+This project is licensed under the [MIT License](https://github.com/mihaly-farkas/copier-template-github-action-typescript?tab=MIT-1-ov-file).

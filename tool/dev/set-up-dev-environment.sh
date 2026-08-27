@@ -49,7 +49,6 @@ echo
 
 echo "${MESSAGE_COLOR}Updating minor dependencies...${NO_COLOR}"
 set -x
-npm update
 npm run dependency-management:update-minor-dependencies
 { set +x; } 2>/dev/null
 echo

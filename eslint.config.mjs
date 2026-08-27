@@ -1,4 +1,5 @@
 import gts from 'gts';
+import globals from 'globals';
 
 let customConfig = [];
 let hasIgnoresFile = false;
@@ -49,6 +50,22 @@ export default [
         'error',
         {
           code: 120,
+        },
+      ],
+    },
+  },
+  {
+    files: ['**/*.spec.mts', '**/*.spec.ts'],
+    languageOptions: {
+      globals: globals.jest,
+    },
+    rules: {
+      'max-len': [
+        'error',
+        {
+          code: 120,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
         },
       ],
     },

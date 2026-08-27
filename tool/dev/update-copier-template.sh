@@ -24,6 +24,6 @@ source tool/dev/bash_utils/ansi-colors.sh
 
 echo "${MESSAGE_COLOR}Updating Copier template...${NO_COLOR}"
 set -x
-copier update --vcs-ref main
+copier update --vcs-ref main --defaults
 { set +x; } 2>/dev/null
 echo

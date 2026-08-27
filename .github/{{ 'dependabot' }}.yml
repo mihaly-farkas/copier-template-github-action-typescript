@@ -16,5 +16,6 @@ updates:
         update-types:
           - "version-update:semver-major"
     commit-message:
-      prefix: test
+      prefix: build
+      scope: node
       include: scope

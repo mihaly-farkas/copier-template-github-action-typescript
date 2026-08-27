@@ -5,13 +5,14 @@ vi.mock('@actions/core', () => ({
   setFailed: vi.fn(),
 }));
 
-test('a script meghívja a setFailed-et a megfelelő hibaüzenettel', async () => {
+test('{{ githubActionName }} GitHub Action fails', async () => {
   // ACT
+  // @ts-ignore
   await import('./index.mts');
 
   // ASSERT
   expect(core.setFailed).toHaveBeenCalledTimes(1);
   expect(core.setFailed).toHaveBeenCalledWith(
-    'Maven Prepare GitHub Action is not implemented!'
+    '{{ githubActionName }} GitHub Action is not implemented!'
   );
 });

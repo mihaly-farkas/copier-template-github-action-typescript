@@ -8,15 +8,17 @@ To create a new GitHub Action, run the following commands:
 
 1. Create a new empty repository on GitHub and clone it to your local machine.
 
-2. Run the flowing commands in the root of the cloned repository :
+2. Run the following commands in the root of the cloned repository :
 
 ```bash
 copier copy gh:mihaly-farkas/copier-template-github-action-typescript --vcs-ref main .
 npm install
 git init
 git add .
-git commit -m "chore: scaffold GitHub Action with TypeScript"
+git commit -m "chore: scaffold the GitHub Action (TypeScript) skeleton"
 git branch -M main
+git remote add origin https://github.com/$(yq .githubRepositoryOwner .copier-answers.yml)/$(yq .githubRepositoryName .copier-answers.yml).git
+git push -u origin main
 ```
 
 ## ⚠️ Disclaimer & Liability

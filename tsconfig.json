@@ -5,7 +5,7 @@
     "outDir": "build"
   },
   "include": [
-    "index.ts"
+    "index.mts"
   ],
   "exclude": [
     "node_modules",

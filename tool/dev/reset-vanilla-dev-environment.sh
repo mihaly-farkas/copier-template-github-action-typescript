@@ -34,14 +34,8 @@ git config core.hooksPath .git/hooks
 { set +x; } 2>/dev/null
 echo
 
-echo "${MESSAGE_COLOR}Removing npm files...${NO_COLOR}"
+echo "${MESSAGE_COLOR}Resetting git repository to HEAD...${NO_COLOR}"
 set -x
-rm -rf node_modules package-lock.json
-{ set +x; } 2>/dev/null
-echo
-
-echo "${MESSAGE_COLOR}Installing dependencies...${NO_COLOR}"
-set -x
-npm install
+git reset --hard HEAD
 { set +x; } 2>/dev/null
 echo

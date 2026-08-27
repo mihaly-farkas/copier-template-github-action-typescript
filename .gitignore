@@ -16,3 +16,6 @@
 /*@tmp
 /snyk.json
 /snyk.sarif
+
+# Node.js
+/node_modules/

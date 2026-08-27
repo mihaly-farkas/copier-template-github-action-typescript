@@ -22,3 +22,4 @@ echo "${MESSAGE_COLOR}Restoring dev dependencies to the ${VALUE_COLOR}node_modul
 set -x
 npm install
 { set +x; } 2>/dev/null
+echo

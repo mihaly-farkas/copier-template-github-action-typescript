@@ -17,7 +17,7 @@ copier copy gh:mihaly-farkas/copier-template-github-action-typescript --vcs-ref 
 ```bash
 npm install
 npm run dependency-management:update-minor-dependencies
-chmod +x .husky/pre-commit .husky/post-commit
+chmod +x .husky/*
 ```
 
 ```bash

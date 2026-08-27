@@ -22,8 +22,29 @@ echo "${MESSAGE_COLOR}Running code fixers...${RESET_COLORS}"
 set -x
 npm run fix
 { set +x; } 2>/dev/null
+echo
 
 echo "${MESSAGE_COLOR}Omitting dev dependencies from the local ${VALUE_COLOR}node_modules/${MESSAGE_COLOR} folder...${RESET_COLORS}"
 set -x
 npm install --omit=dev
 { set +x; } 2>/dev/null
+echo
+
+echo "${MESSAGE_COLOR}Restoring the ${VALUE_COLOR}node_modules/.package-lock.json${MESSAGE_COLOR} file worktree tracking status...${RESET_COLORS}"
+set -x
+git update-index --no-skip-worktree node_modules/.package-lock.json
+{ set +x; } 2>/dev/null
+echo
+
+echo "${MESSAGE_COLOR}Force adding the ${VALUE_COLOR}node_modules/${MESSAGE_COLOR} folder to the commit...${RESET_COLORS}"
+set -x
+git add -f node_modules/
+{ set +x; } 2>/dev/null
+echo
+
+echo "${MESSAGE_COLOR}Setting the ${VALUE_COLOR}node_modules/.package-lock.json${MESSAGE_COLOR} file worktree tracking skip...${RESET_COLORS}"
+set -x
+git update-index --skip-worktree node_modules/.package-lock.json
+{ set +x; } 2>/dev/null
+echo
+

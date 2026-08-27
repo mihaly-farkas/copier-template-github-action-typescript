@@ -28,8 +28,6 @@ git remote add origin https://github.com/$(yq .githubRepositoryOwner .copier-ans
 git push --set-upstream origin main
 ```
 
-
-
 ## ⚠️ Disclaimer & Liability
 
 This is a hobby project. I make no guarantee that it is production-ready. The project may contain experimental or incomplete features.

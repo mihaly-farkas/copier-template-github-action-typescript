@@ -1,10 +1,10 @@
-import chaiFriendly from 'eslint-plugin-chai-friendly';
 import gts from 'gts';
 
 let customConfig = [];
 let hasIgnoresFile = false;
 
 try {
+  // noinspection JSFileReferences
   await import('./eslint.ignores.mjs');
   hasIgnoresFile = true;
 } catch {
@@ -12,6 +12,7 @@ try {
 }
 
 if (hasIgnoresFile) {
+  // noinspection JSFileReferences
   const {default: ignores} = await import('./eslint.ignores.mjs');
   customConfig = [{ignores}];
 }
@@ -20,10 +21,6 @@ export default [
   ...customConfig,
   ...gts,
   {
-    plugins: {
-      'chai-friendly': chaiFriendly,
-    },
-
     rules: {
       'max-len': [
         'error',
@@ -31,8 +28,6 @@ export default [
           code: 120,
         },
       ],
-      '@typescript-eslint/no-unused-expressions': 'off',
-      'chai-friendly/no-unused-expressions': 'error',
     },
   },
 ];

@@ -4,11 +4,14 @@ import path from 'node:path';
 
 export interface CompareFilesOptions {
   ignoreList?: string[];
-  compareCallback?: (actualFile: { path: string, content: string }, referenceFile: {
-    path: string,
-    content: string
-  }) => void;
-  nonExpectedFileCallback?: (nonExpectedFile: { path: string, content: string }) => void;
+  compareCallback?: (
+    actualFile: {path: string; content: string},
+    referenceFile: {
+      path: string;
+      content: string;
+    },
+  ) => void;
+  nonExpectedFileCallback?: (nonExpectedFile: {path: string; content: string}) => void;
 }
 
 export function compareFiles(actualDir: string, expectedDir: string, options: CompareFilesOptions = {}) {
@@ -23,10 +26,13 @@ export function compareFiles(actualDir: string, expectedDir: string, options: Co
       const generatedFileContent = readFileSync(generatedFilePath, 'utf-8');
       const referenceFileContent = readFileSync(referenceFilePath, 'utf-8');
 
-      compareCallback({path: generatedFilePath, content: generatedFileContent}, {
-        path: referenceFilePath,
-        content: referenceFileContent
-      });
+      compareCallback(
+        {path: generatedFilePath, content: generatedFileContent},
+        {
+          path: referenceFilePath,
+          content: referenceFileContent,
+        },
+      );
     });
   }
 

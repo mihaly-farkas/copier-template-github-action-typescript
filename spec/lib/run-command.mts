@@ -1,19 +1,31 @@
-import {execSync} from 'node:child_process';
+import {spawnSync} from 'node:child_process';
 
 export interface CommandResult {
   readonly cwd: string;
   readonly command: string;
-  readonly output: string;
+  readonly stdout?: string;
+  readonly stderr?: string;
   readonly error?: Error;
 }
 
 export const runCommand = (cwd: string, command: string): CommandResult => {
-  try {
-    const output = execSync(command, {cwd, encoding: 'utf8'});
-    return {cwd, command, output};
-  } catch (error) {
-    const commandError = error instanceof Error ? error : new Error(String(error));
-    const output = error instanceof Error && 'stdout' in error && typeof error.stdout === 'string' ? error.stdout : '';
-    return {cwd, command, output, error: commandError};
+  const result = spawnSync(command, {cwd, encoding: 'utf8', shell: true});
+
+  const stdout = result.stdout ? result.stdout.trim() : '';
+  const stderr = result.stderr ? result.stderr.trim() : '';
+
+  let error: Error | undefined = undefined;
+  if (result.error) {
+    error = result.error;
+  } else if (result.status !== 0) {
+    error = new Error(`Command failed with exit code ${result.status}`);
   }
+
+  return {
+    cwd,
+    command,
+    stdout,
+    stderr,
+    error,
+  };
 };

@@ -18,9 +18,11 @@ test('Project generated with the default parameters without error', async () => 
   const result = generateProject(projectDir, params);
 
   // ASSERT
-  const message = () => 'Execution failed. ' + JSON.stringify({
-    commandExecutionResult: result,
-  });
+  const message = () =>
+    'Execution failed. ' +
+    JSON.stringify({
+      commandExecutionResult: result,
+    });
   expect(result.error, message()).toBeUndefined();
 });
 
@@ -32,9 +34,11 @@ test('Project generated with the default parameters installs dependencies withou
   const result = runCommand(projectDir, 'npm install');
 
   // ASSERT
-  const message = () => 'Execution failed. ' + JSON.stringify({
-    commandExecutionResult: result,
-  });
+  const message = () =>
+    'Execution failed. ' +
+    JSON.stringify({
+      commandExecutionResult: result,
+    });
   expect(result.error, message()).toBeUndefined();
 }, 60000);
 
@@ -46,9 +50,11 @@ test('Project generated with the default parameters runs tests without error', a
   const result = runCommand(projectDir, 'npm run test');
 
   // ASSERT
-  const message = () => 'Execution failed. ' + JSON.stringify({
-    commandExecutionResult: result,
-  });
+  const message = () =>
+    'Execution failed. ' +
+    JSON.stringify({
+      commandExecutionResult: result,
+    });
   expect(result.error, message()).toBeUndefined();
 }, 60000);
 
@@ -61,17 +67,21 @@ test('Project generated with the default parameters matches the reference projec
   compareFiles(projectDir, referenceProjectDir, {
     ignoreList,
     compareCallback: (actualFile, referenceFile) => {
-      const message = () => 'File contents do not match. ' + JSON.stringify({
-        actualFile: actualFile.path,
-        referenceFile: referenceFile.path
-      });
+      const message = () =>
+        'File contents do not match. ' +
+        JSON.stringify({
+          actualFile: actualFile.path,
+          referenceFile: referenceFile.path,
+        });
       expect(actualFile.content, message()).toEqual(referenceFile.content);
     },
-    nonExpectedFileCallback: (nonExpectedFile) => {
-      const message = () => 'Non-expected file found. ' + JSON.stringify({
-        nonExpectedFilePath: nonExpectedFile.path
-      });
+    nonExpectedFileCallback: nonExpectedFile => {
+      const message = () =>
+        'Non-expected file found. ' +
+        JSON.stringify({
+          nonExpectedFilePath: nonExpectedFile.path,
+        });
       expect(nonExpectedFile, message()).toBeUndefined();
-    }
+    },
   });
 });

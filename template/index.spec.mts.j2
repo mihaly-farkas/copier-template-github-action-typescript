@@ -20,7 +20,5 @@ test('{{ githubActionName }} GitHub Action fails (not implemented yet)', async (
 
   // ASSERT
   expect(core.setFailed).toHaveBeenCalledTimes(1);
-  expect(core.setFailed).toHaveBeenCalledWith(
-    '{{ githubActionName }} GitHub Action is not implemented yet!'
-  );
+  expect(core.setFailed).toHaveBeenCalledWith('{{ githubActionName }} GitHub Action is not implemented yet!');
 });

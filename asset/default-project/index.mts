@@ -1,8 +1,7 @@
 import * as core from '@actions/core';
 
-export const run = async (): Promise<boolean> => {
+const run = async () => {
   core.setFailed('my-action GitHub Action is not implemented yet!');
-  return false;
 };
 
 try {

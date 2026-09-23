@@ -10,18 +10,14 @@
   },
   "main": "index.mts",
   "scripts": {
-    "clean": "npm run clean:dir && npm run clean:gts",
-    "clean:dir": "rimraf .tmp",
-    "clean:gts": "npx gts clean",
-    "test": "npm run clean && npm run test:gts && npm run test:vitest",
-    "test:gts": "npx gts check '*.mts' 'spec/**/*.mts'",
-    "test:vitest": "npx vitest run",
-    "fix": "npm run clean && npm run fix:gts",
-    "fix:gts": "npx gts fix '*.mts' 'spec/**/*.mts'",
+    "clean": "npx gts clean",
+    "check": "npx gts check '*.mts' 'spec/**/*.mts'",
+    "fix": "npx gts fix '*.mts' 'spec/**/*.mts'",
+    "test": "npx vitest run",
     "dependency-management:show-major-updates": "npx npm-check-updates",
     "dependency-management:show-minor-updates": "npx npm-check-updates --target semver",
     "dependency-management:update-minor-dependencies": "npx npm-check-updates --target minor --upgrade && npm install",
-    "dev-workflow": "npm run fix && npm run test"
+    "dev-workflow": "npm run clean && npm run fix && npm run test"
   },
   "devDependencies": {
     "@types/node": "24.13.6",

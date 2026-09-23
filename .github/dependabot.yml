@@ -1,20 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: pip
     directory: /
     schedule:
       interval: daily
     groups:
-      npm-dependencies:
+      pip-dependencies:
         patterns:
           - "*"
-    ignore:
-      - dependency-name: "@types/node"
-        update-types:
-          - "version-update:semver-major"
-      - dependency-name: typescript
-        update-types:
-          - "version-update:semver-major"
     commit-message:
       prefix: build
       include: scope

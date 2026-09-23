@@ -17,6 +17,10 @@
 /snyk.json
 /snyk.sarif
 
-# Node.js
-/build/
-/node_modules/
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+dist/
+*.egg-info/

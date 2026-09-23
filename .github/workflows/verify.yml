@@ -1,0 +1,37 @@
+name: Verify
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .github/dependabot.yml
+      - tool/**
+      - .editorconfig
+      - .gitignore
+      - LICENSE
+      - README.md
+concurrency:
+  group: ${{ github.repository }}-verify-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify-npm:
+    name: Verify npm
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: "Checkout Git repository"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: "Set up Node.js"
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 #v7.0.0
+        with:
+          node-version: 24
+      - name: "Prepare"
+        run: |
+          npm ci
+      - name: "Run tests"
+        run: |
+          npm test

@@ -17,7 +17,6 @@ updates:
           - "version-update:semver-major"
     commit-message:
       prefix: build
-      scope: node
       include: scope
 
   - package-ecosystem: github-actions

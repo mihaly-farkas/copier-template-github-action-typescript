@@ -9,11 +9,13 @@
  * tests are **NOT INDEPENDENT**.
  *
  * In practice, it works with three different directories:
- * 1. The `<project_root>/template/` directory contains the template files that are used to generate the project.
- * 2. The `<project_root>/assert/default-project/` directory contains the reference project that is used to compare
+ * 1. The `<project_root>/template/` directory contains the **Template Blueprint** files that are used to generate the
+ *    project.
+ * 2. The `<project_root>/assert/default-project/` directory contains the **Reference Project** that is used to compare
  *    the generated project.
  * 3. During the test execution, a temporary directory is created in the `<project_root>/.tmp/default-project/`
- *    directory, where the project is generated from the template files and tested against the reference project.
+ *    directory, where the project is generated from the **Template Blueprint** and tested against the
+ *    **Reference Project**.
  *
  * The test suite uses Vitest as the testing framework and is designed to be run in a Node.js environment.
  * The tests are written in TypeScript and use the ES module syntax.
@@ -27,7 +29,7 @@ import {compareFiles} from './lib/compare-files.mts';
 import {runCommand} from './lib/run-command.mts';
 
 const defaultCase = 'default-project';
-const ignoreList = ['.idea/.*', 'build/.*', 'node_modules/.*', '.*\\.iml', 'package-lock\\.json'];
+const ignoreList = ['.idea/.*', 'build/.*', 'coverage/.*', 'node_modules/.*', '.*\\.iml', 'package-lock\\.json'];
 
 test('A project can be generated with the default parameters', async () => {
   // ARRANGE

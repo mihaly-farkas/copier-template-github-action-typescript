@@ -3,4 +3,4 @@ description: >
   My GitHub Action
 runs:
   using: "node24"
-  main: "index.mts"
+  main: "src/index.mts"

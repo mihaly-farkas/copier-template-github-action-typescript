@@ -1,14 +1,11 @@
-import {test, expect, vi} from 'vitest';
+import {beforeEach, expect, test, vi} from 'vitest';
+
 import * as core from '@actions/core';
+import {run} from './run.mts';
 
 vi.mock('@actions/core', () => ({
   setFailed: vi.fn(),
 }));
-
-async function importAction(): Promise<void> {
-  vi.resetModules();
-  await import('./index.mts');
-}
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -16,7 +13,7 @@ beforeEach(() => {
 
 test('my-action GitHub Action fails (not implemented yet)', async () => {
   // ACT
-  await importAction();
+  await run();
 
   // ASSERT
   expect(core.setFailed).toHaveBeenCalledTimes(1);

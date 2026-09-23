@@ -11,8 +11,7 @@
     "types": ["node", "vitest/globals"]
   },
   "include": [
-    "index.mts",
-    "index.spec.mts",
+    "src/**/*.mts",
     "vitest.config.mts"
   ],
   "exclude": [

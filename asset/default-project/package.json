@@ -1,13 +1,13 @@
 {
-  "name": "@{{ githubRepositoryOwner }}/{{ githubRepositoryName }}",
-  "description": "{{ githubActionDescription }}",
+  "name": "@my-github-username/my-repo",
+  "description": "My GitHub Action",
   "keywords": [
     "github-actions"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{ githubRepositoryOwner }}/{{ githubRepositoryName }}.git"
+    "url": "git+https://github.com/my-github-username/my-repo.git"
   },
   "type": "module",
   "engines": {

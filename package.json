@@ -1,0 +1,35 @@
+{
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihaly-farkas/copier-template-github-action-typescript.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">= 24.0.0"
+  },
+  "main": "index.mts",
+  "scripts": {
+    "clean": "npm run clean:dir && npm run clean:gts",
+    "clean:dir": "rimraf .tmp",
+    "clean:gts": "npx gts clean",
+    "test": "npm run clean && npm run test:gts && npm run test:vitest",
+    "test:gts": "npx gts check '*.mts' 'spec/**/*.mts'",
+    "test:vitest": "npx vitest run",
+    "fix": "npm run clean && npm run fix:gts",
+    "fix:gts": "npx gts fix '*.mts' 'spec/**/*.mts'",
+    "dependency-management:show-major-updates": "npx npm-check-updates",
+    "dependency-management:show-minor-updates": "npx npm-check-updates --target semver",
+    "dependency-management:update-minor-dependencies": "npx npm-check-updates --target minor --upgrade && npm install",
+    "dev-workflow": "npm run fix && npm run test"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.6",
+    "gts": "7.0.0",
+    "npm-check-updates": "23.1.0",
+    "rimraf": "6.1.3",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.1"
+  }
+}

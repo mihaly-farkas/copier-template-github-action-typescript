@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) {% if ((licenseYearStart != 2026) and (licenseYearStart != '2026')) %}{{ licenseYearStart }}-{% endif %}2026 {{ licenseOwner }}
+Copyright (c) 2026 My Name
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

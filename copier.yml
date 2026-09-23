@@ -1,7 +1,7 @@
 _templates_suffix: .j2
 _subdirectory: template
 
-licenceOwner:
+licenseOwner:
   type: str
   help: The name of the license owner
 

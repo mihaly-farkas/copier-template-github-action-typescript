@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier
+_commit: "0000000"
+_src_path: .
+githubActionDescription: My GitHub Action
+githubActionExampleStepName: My Example Step
+githubActionName: my-action
+githubRepositoryName: my-repo
+githubRepositoryOwner: my-github-username
+licenseOwner: My Name
+licenseYearStart: 2026

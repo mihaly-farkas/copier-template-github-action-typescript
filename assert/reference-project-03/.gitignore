@@ -17,13 +17,7 @@
 /snyk.json
 /snyk.sarif
 
-# Python
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.venv/
-dist/
-*.egg-info/
-
-# Agentic Workflow
-/.ai-workspace/
+# Node.js
+/build/
+/coverage/
+/node_modules/

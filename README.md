@@ -1,3 +1,5 @@
+[![Verify](https://github.com/mihaly-farkas/copier-template-github-action-typescript/actions/workflows/verify.yml/badge.svg)](https://github.com/mihaly-farkas/copier-template-github-action-typescript/actions/workflows/verify.yml)
+
 # copier-template-github-action-typescript
 
 Copier template to scaffold a GitHub Action with TypeScript.

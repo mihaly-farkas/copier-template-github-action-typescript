@@ -1,6 +1,7 @@
 _templates_suffix: .j2
+_subdirectory: template
 
-licenceOwner:
+licenseOwner:
   type: str
   help: The name of the license owner
 
@@ -21,6 +22,14 @@ githubActionName:
     type: str
     help: The name of the GitHub Action
 
+githubActionNameCamelCase:
+    type: str
+    help: The name of the GitHub Action in camelCase format
+
+githubActionNameKebabCase:
+    type: str
+    help: The name of the GitHub Action in kebab-case format
+
 githubActionDescription:
     type: str
     help: The description of the GitHub Action
@@ -28,5 +37,4 @@ githubActionDescription:
 githubActionExampleStepName:
   type: str
   help: The name of the step in the example GitHub Action workflow
-
 

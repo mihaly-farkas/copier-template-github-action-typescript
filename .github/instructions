@@ -1,3 +1,15 @@
-## Commit Message Rules
+## Project Structure
 
-Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) specification for Git commit messages.
+This repository is a Copier template used to generate GitHub Action projects using TypeScript. It contains two distinct contexts: the **Template Development Environment** and the **Target Template Source**.
+
+### 1. Template Development & Testing Environment
+These files manage the template itself and its testing framework. Do **not** modify these unless you are changing the template logic or tests:
+- `<project_root>/` : The root of the template repository. Files directly here (except `copier.yml`) belong to the testing framework, not the template blueprint.
+- `<project_root>/copier.yml` : The Copier configuration file defining variables and tasks.
+- `<project_root>/spec/` : Contains test specifications for testing the template logic.
+- `<project_root>/spec/lib/` : Helper utilities for the test suites.
+- `<project_root>/assert/` : Contains expected output files used for assertion during tests.
+- `<project_root>/.tmp/` : A temporary directory generated and used exclusively during tests.
+
+### 2. Target Template Source (The Generated Project Structure)
+- `<project_root>/template/` : **Crucial Context.** This directory contains the actual blueprint of the generated project. Any code that is meant to end up in the user's final repository must be written inside this folder.

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "copier-template-github-action-typescript-tests"
+version = "0.0.0"
+requires-python = ">=3.14"
+dependencies = [
+  "copier==9.18.2",
+  "langchain-community==0.4.2",
+  "langchain-githubcopilot-chat==0.6.1",
+  "langchain-core==1.6.4",
+  "langchain==1.4.2",
+  "pytest==9.1.1",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["spec"]
+python_files = ["*_spec.py"]
+addopts = "-ra"

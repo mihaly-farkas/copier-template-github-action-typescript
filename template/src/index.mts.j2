@@ -1,0 +1,9 @@
+import * as core from '@actions/core';
+
+import {{ githubActionNameCamelCase }} from './action/{{ githubActionNameKebabCase}}.mts';
+
+try {
+  await {{ githubActionNameCamelCase }}(core);
+} catch (error) {
+  core.setFailed(error instanceof Error ? error.message : `Action failed with unexpected error: ${String(error)}`);
+}

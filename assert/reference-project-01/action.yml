@@ -1,0 +1,6 @@
+name: "dynamic-token-aa9d4c88"
+description: >
+  DYNAMIC_TOKEN:19bd01a9
+runs:
+  using: "node24"
+  main: "src/index.mts"

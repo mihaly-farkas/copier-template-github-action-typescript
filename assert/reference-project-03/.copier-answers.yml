@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+_commit: "0000000"
+_src_path: .
+githubActionDescription: This is a dummy GitHub Action that does nothing
+githubActionExampleStepName: Do something interesting
+githubActionName: Custom Action 03
+githubActionNameCamelCase: customAction03
+githubActionNameKebabCase: custom-action-03
+githubRepositoryName: github-action-reference-03
+githubRepositoryOwner: john-doe
+licenseOwner: John Doe
+licenseYearStart: 2026

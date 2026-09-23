@@ -1,0 +1,388 @@
+{
+  "input": 4951,
+  "cached_input": 7808,
+  "cache_write": 0,
+  "output": 185,
+  "details": [
+    {
+      "tool_call": true,
+      "response": false,
+      "input": 1836,
+      "cached_input": 0,
+      "cache_write": 0,
+      "output": 24
+    },
+    {
+      "tool_call": true,
+      "response": false,
+      "input": 192,
+      "cached_input": 1792,
+      "cache_write": 0,
+      "output": 23
+    },
+    {
+      "tool_call": true,
+      "response": false,
+      "input": 116,
+      "cached_input": 1920,
+      "cache_write": 0,
+      "output": 21
+    },
+    {
+      "tool_call": true,
+      "response": false,
+      "input": 2236,
+      "cached_input": 0,
+      "cache_write": 0,
+      "output": 34
+    },
+    {
+      "tool_call": true,
+      "response": false,
+      "input": 129,
+      "cached_input": 2176,
+      "cache_write": 0,
+      "output": 35
+    },
+    {
+      "tool_call": false,
+      "response": true,
+      "input": 442,
+      "cached_input": 1920,
+      "cache_write": 0,
+      "output": 48
+    }
+  ],
+  "price_estimation": [
+    {
+      "model": "GPT-6 Luna",
+      "input": 0.0004950999999999999,
+      "cached_input": 7.808e-05,
+      "cache_write": 0.0,
+      "output": 9.25e-05,
+      "total": 0.00066568,
+      "ai_credit": 0.066568,
+      "multiplier": 1.0
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "input": 0.0009901999999999999,
+      "cached_input": 0.00015616,
+      "cache_write": 0.0,
+      "output": 0.00022199999999999998,
+      "total": 0.0013683599999999999,
+      "ai_credit": 0.13683599999999999,
+      "multiplier": 2.0555822617473862
+    },
+    {
+      "model": "MAI-Code-1.1-Flash",
+      "input": 0.0009901999999999999,
+      "cached_input": 0.00015616,
+      "cache_write": 0.0,
+      "output": 0.00022199999999999998,
+      "total": 0.0013683599999999999,
+      "ai_credit": 0.13683599999999999,
+      "multiplier": 2.0555822617473862
+    },
+    {
+      "model": "GPT-5.4 nano",
+      "input": 0.0009901999999999999,
+      "cached_input": 0.00015616,
+      "cache_write": 0.0,
+      "output": 0.00023125,
+      "total": 0.00137761,
+      "ai_credit": 0.137761,
+      "multiplier": 2.0694778271842327
+    },
+    {
+      "model": "GPT-5 mini",
+      "input": 0.00123775,
+      "cached_input": 0.0001952,
+      "cache_write": 0.0,
+      "output": 0.00037,
+      "total": 0.0018029499999999998,
+      "ai_credit": 0.18029499999999998,
+      "multiplier": 2.7084334815526976
+    },
+    {
+      "model": "Gemini 3.6 Flash1",
+      "input": 0.0037132499999999995,
+      "cached_input": 0.0005855999999999999,
+      "cache_write": 0.0,
+      "output": 0.00069375,
+      "total": 0.0049926,
+      "ai_credit": 0.49926,
+      "multiplier": 7.5
+    },
+    {
+      "model": "Gemini 3.7 Flash1",
+      "input": 0.0037132499999999995,
+      "cached_input": 0.0005855999999999999,
+      "cache_write": 0.0,
+      "output": 0.00069375,
+      "total": 0.0049926,
+      "ai_credit": 0.49926,
+      "multiplier": 7.5
+    },
+    {
+      "model": "Gemini 3.8 Flash1",
+      "input": 0.0037132499999999995,
+      "cached_input": 0.0005855999999999999,
+      "cache_write": 0.0,
+      "output": 0.00069375,
+      "total": 0.0049926,
+      "ai_credit": 0.49926,
+      "multiplier": 7.5
+    },
+    {
+      "model": "GPT-5.4 mini",
+      "input": 0.0037132499999999995,
+      "cached_input": 0.0005855999999999999,
+      "cache_write": 0.0,
+      "output": 0.0008325,
+      "total": 0.00513135,
+      "ai_credit": 0.513135,
+      "multiplier": 7.708433481552698
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "input": 0.004951,
+      "cached_input": 0.0007808,
+      "cache_write": 0.0,
+      "output": 0.000925,
+      "total": 0.006656799999999999,
+      "ai_credit": 0.6656799999999999,
+      "multiplier": 9.999999999999998
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "input": 0.00470345,
+      "cached_input": 0.0014835199999999999,
+      "cache_write": 0.0,
+      "output": 0.00074,
+      "total": 0.00692697,
+      "ai_credit": 0.692697,
+      "multiplier": 10.405855666386252
+    },
+    {
+      "model": "Gemini 3.5 Flash",
+      "input": 0.007426499999999999,
+      "cached_input": 0.0011711999999999998,
+      "cache_write": 0.0,
+      "output": 0.001665,
+      "total": 0.0102627,
+      "ai_credit": 1.02627,
+      "multiplier": 15.416866963105395
+    },
+    {
+      "model": "GPT-5.3-Codex",
+      "input": 0.00866425,
+      "cached_input": 0.0013663999999999998,
+      "cache_write": 0.0,
+      "output": 0.00259,
+      "total": 0.01262065,
+      "ai_credit": 1.262065,
+      "multiplier": 18.95903437086889
+    },
+    {
+      "model": "GPT-6 Sol",
+      "input": 0.009902,
+      "cached_input": 0.0015616,
+      "cache_write": 0.0,
+      "output": 0.00185,
+      "total": 0.013313599999999998,
+      "ai_credit": 1.3313599999999999,
+      "multiplier": 19.999999999999996
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "input": 0.009902,
+      "cached_input": 0.0015616,
+      "cache_write": 0.0,
+      "output": 0.00185,
+      "total": 0.013313599999999998,
+      "ai_credit": 1.3313599999999999,
+      "multiplier": 19.999999999999996
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "input": 0.009902,
+      "cached_input": 0.0015616,
+      "cache_write": 0.0,
+      "output": 0.0022199999999999998,
+      "total": 0.013683599999999999,
+      "ai_credit": 1.3683599999999998,
+      "multiplier": 20.55582261747386
+    },
+    {
+      "model": "Grok 4.5",
+      "input": 0.009902,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.0011099999999999999,
+      "total": 0.014915999999999999,
+      "ai_credit": 1.4915999999999998,
+      "multiplier": 22.40716260064896
+    },
+    {
+      "model": "Grok 4.6",
+      "input": 0.009902,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.0011099999999999999,
+      "total": 0.014915999999999999,
+      "ai_credit": 1.4915999999999998,
+      "multiplier": 22.40716260064896
+    },
+    {
+      "model": "Grok 4.7",
+      "input": 0.009902,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.0011099999999999999,
+      "total": 0.014915999999999999,
+      "ai_credit": 1.4915999999999998,
+      "multiplier": 22.40716260064896
+    },
+    {
+      "model": "GPT-5.4",
+      "input": 0.0123775,
+      "cached_input": 0.001952,
+      "cache_write": 0.0,
+      "output": 0.002775,
+      "total": 0.0171045,
+      "ai_credit": 1.71045,
+      "multiplier": 25.69477827184233
+    },
+    {
+      "model": "Claude Sonnet 4",
+      "input": 0.014852999999999998,
+      "cached_input": 0.0023423999999999997,
+      "cache_write": 0.0,
+      "output": 0.002775,
+      "total": 0.0199704,
+      "ai_credit": 1.99704,
+      "multiplier": 30.0
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "input": 0.014852999999999998,
+      "cached_input": 0.0023423999999999997,
+      "cache_write": 0.0,
+      "output": 0.002775,
+      "total": 0.0199704,
+      "ai_credit": 1.99704,
+      "multiplier": 30.0
+    },
+    {
+      "model": "Kimi K3",
+      "input": 0.014852999999999998,
+      "cached_input": 0.0023423999999999997,
+      "cache_write": 0.0,
+      "output": 0.002775,
+      "total": 0.0199704,
+      "ai_credit": 1.99704,
+      "multiplier": 30.0
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "input": 0.019804,
+      "cached_input": 0.0015616,
+      "cache_write": 0.0,
+      "output": 0.0037,
+      "total": 0.0250656,
+      "ai_credit": 2.50656,
+      "multiplier": 37.65412810960221
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "input": 0.019804,
+      "cached_input": 0.0031232,
+      "cache_write": 0.0,
+      "output": 0.0037,
+      "total": 0.026627199999999997,
+      "ai_credit": 2.6627199999999998,
+      "multiplier": 39.99999999999999
+    },
+    {
+      "model": "Claude Opus 4.7",
+      "input": 0.024755,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.004625,
+      "total": 0.033284,
+      "ai_credit": 3.3284000000000002,
+      "multiplier": 50.0
+    },
+    {
+      "model": "Claude Opus 4.8",
+      "input": 0.024755,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.004625,
+      "total": 0.033284,
+      "ai_credit": 3.3284000000000002,
+      "multiplier": 50.0
+    },
+    {
+      "model": "Claude Opus 5",
+      "input": 0.024755,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.004625,
+      "total": 0.033284,
+      "ai_credit": 3.3284000000000002,
+      "multiplier": 50.0
+    },
+    {
+      "model": "GPT-5.5",
+      "input": 0.024755,
+      "cached_input": 0.003904,
+      "cache_write": 0.0,
+      "output": 0.00555,
+      "total": 0.034209,
+      "ai_credit": 3.4209,
+      "multiplier": 51.38955654368466
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "input": 0.04951,
+      "cached_input": 0.001952,
+      "cache_write": 0.0,
+      "output": 0.00925,
+      "total": 0.060712,
+      "ai_credit": 6.0712,
+      "multiplier": 91.2029804110083
+    },
+    {
+      "model": "GPT-6 Astra",
+      "input": 0.04951,
+      "cached_input": 0.007808,
+      "cache_write": 0.0,
+      "output": 0.00925,
+      "total": 0.066568,
+      "ai_credit": 6.6568000000000005,
+      "multiplier": 100.0
+    },
+    {
+      "model": "Claude Opus 4.8 (fast mode) (preview)",
+      "input": 0.04951,
+      "cached_input": 0.007808,
+      "cache_write": 0.0,
+      "output": 0.00925,
+      "total": 0.066568,
+      "ai_credit": 6.6568000000000005,
+      "multiplier": 100.0
+    },
+    {
+      "model": "Claude Fable 5",
+      "input": 0.04951,
+      "cached_input": 0.007808,
+      "cache_write": 0.0,
+      "output": 0.00925,
+      "total": 0.066568,
+      "ai_credit": 6.6568000000000005,
+      "multiplier": 100.0
+    }
+  ]
+}

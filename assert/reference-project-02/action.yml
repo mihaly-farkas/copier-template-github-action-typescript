@@ -1,0 +1,6 @@
+name: "github-action-reference-02"
+description: >
+  This is yet another dummy GitHub Action that does nothing
+runs:
+  using: "node24"
+  main: "src/index.mts"

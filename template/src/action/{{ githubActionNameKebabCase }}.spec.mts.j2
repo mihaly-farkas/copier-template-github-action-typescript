@@ -1,0 +1,20 @@
+import {beforeEach, expect, test, vi} from 'vitest';
+
+import * as core from '@actions/core';
+import {{ githubActionNameCamelCase }} from './{{ githubActionNameKebabCase }}.mts';
+
+vi.mock('@actions/core', () => ({
+  setFailed: vi.fn(),
+}));
+
+beforeEach(() => {
+  vi.clearAllMocks();
+});
+
+test('{{ githubActionName }} fails (not implemented yet)', async () => {
+  // ACT
+  await {{ githubActionNameCamelCase }}(core);
+  // ASSERT
+  expect(core.setFailed).toHaveBeenCalledTimes(1);
+  expect(core.setFailed).toHaveBeenCalledWith('{{ githubActionName }} is not implemented yet!');
+});

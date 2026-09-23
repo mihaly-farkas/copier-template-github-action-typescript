@@ -16,3 +16,7 @@
 /*@tmp
 /snyk.json
 /snyk.sarif
+
+# Node.js
+/build/
+/node_modules/

@@ -1,4 +1,5 @@
 _templates_suffix: .j2
+_subdirectory: template
 
 licenceOwner:
   type: str
@@ -28,5 +29,4 @@ githubActionDescription:
 githubActionExampleStepName:
   type: str
   help: The name of the step in the example GitHub Action workflow
-
 

@@ -4,32 +4,12 @@ This repository is a Copier template used to generate GitHub Action projects usi
 
 ### 1. Template Development & Testing Environment
 These files manage the template itself and its testing framework. Do **not** modify these unless you are changing the template logic or tests:
-- `<project_root>/` : The root of the template repository. Files directly here (except `copier.yml`) belong to the testing framework.
+- `<project_root>/` : The root of the template repository. Files directly here (except `copier.yml`) belong to the testing framework, not the template blueprint.
 - `<project_root>/copier.yml` : The Copier configuration file defining variables and tasks.
 - `<project_root>/spec/` : Contains test specifications for testing the template logic.
-- `<project_root>/spec/**/*.spec.mts` : Test specification files.
-- `<project_root>/spec/lib/*.mts` : Helper utilities for the test suite.
+- `<project_root>/spec/lib/` : Helper utilities for the test suites.
 - `<project_root>/assert/` : Contains expected output files used for assertion during tests.
 - `<project_root>/.tmp/` : A temporary directory generated and used exclusively during tests.
 
 ### 2. Target Template Source (The Generated Project Structure)
 - `<project_root>/template/` : **Crucial Context.** This directory contains the actual blueprint of the generated project. Any code that is meant to end up in the user's final repository must be written inside this folder.
-
-## Validation & Quality Rules
-
-Before marking any changes as complete, you must always execute the following workflow from the root directory:
-1. Run `npm run clean` : This command will clean up the development environment.
-2. Run `npm run fix` : This command will automatically fix any formatting issues in the **Template Development Environment**.
-3. Run `npm run test` : This command will run the test suite to ensure that all tests pass successfully.
-
-## Commit Message Rules
-
-You must strictly follow the Conventional Commits (v1.0.0) specification for all Git commit messages. Structure your commit messages as follows:
-`<type>[optional scope]: <description>`
-
-Allowed types include:
-- `feat`: A new feature (correlates with MINOR versioning).
-- `fix`: A bug fix (correlates with PATCH versioning).
-- `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `build`, `ci`.
-
-*Note: For breaking changes, append a `!` after the type/scope or include `BREAKING CHANGE:` in the footer (correlates with MAJOR versioning).*

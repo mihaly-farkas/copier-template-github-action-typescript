@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=84.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -10,8 +10,8 @@ dependencies = [
   "copier==9.18.2",
   "langchain-community==0.4.2",
   "langchain-githubcopilot-chat==0.6.1",
-  "langchain-core==1.6.4",
-  "langchain==1.4.2",
+  "langchain-core==1.6.5",
+  "langchain==1.4.3",
   "pytest==9.1.1",
 ]
 

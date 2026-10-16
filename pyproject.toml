@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=84.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,11 +7,11 @@ name = "copier-template-github-action-typescript-tests"
 version = "0.0.0"
 requires-python = ">=3.14"
 dependencies = [
-  "copier==9.18.2",
+  "copier==9.19.0",
   "langchain-community==0.4.2",
   "langchain-githubcopilot-chat==0.6.1",
-  "langchain-core==1.6.4",
-  "langchain==1.4.2",
+  "langchain-core==1.6.10",
+  "langchain==1.4.5",
   "pytest==9.1.1",
 ]
 
